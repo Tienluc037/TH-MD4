@@ -1,0 +1,26 @@
+<div class="card">
+    <h5 class="card-header ">Update book</h5>
+    <div class="card-body">
+      <form *ngIf="editBookForm" [formGroup]="editBookForm" (ngSubmit)="editBook()">
+        <div class="form-group">
+            <label for="">ID</label>
+            <input type="text" class="form-control" formControlName="id" readonly>
+        </div>
+        <div class="form-group">
+          <label for="">Title</label>
+          <input type="text" class="form-control" formControlName="title" id="" aria-describedby="emailHelp" placeholder="Enter title">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Author </label>
+          <input type="text" class="form-control" formControlName="author"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter author">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Description </label>
+            <input type="text" class="form-control" formControlName="description"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter description">
+          </div>
+          <div class="row">
+            <div class="col-1"><button type="submit" class="btn btn-outline-info">Submit</button></div>
+            <div class="col-2"><button class="btn btn-outline-dark " routerLink="/books">Back</button></div>
+        </div>
+      </form>
+    </div>
